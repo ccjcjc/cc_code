@@ -8,11 +8,11 @@ namespace MethodManager
 {
     public class MethodsManager
     {
-        Dictionary<string, Type> dictMethods = null;
+        Dictionary<string, Type> dictMethods = null;//键值对，string为Key，Type为Value
 
         public MethodsManager(Form frm, List<Type> methods)
         {
-            dictMethods = methods.ToDictionary(i => i.Name);
+            dictMethods = methods.ToDictionary(i => i.Name);//以Type中的Name为Key，然后找Key时就通过Name就可以找到对应的Value（Type类型的）（dictMethods.ContainsKey(methodName)）
         }
 
         public void MethodButton_Click(object sender, EventArgs e)
